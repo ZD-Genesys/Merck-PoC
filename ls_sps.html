@@ -20,7 +20,7 @@
 
   Genesys("subscribe", "Database.ready", function() {
   console.log("Database plugin is ready.");
-  Genesys("command", "Database.set", { messaging: { customAttributes: { 'firstName': 'Bryan', 'lastName':'Cole', 'email':'bryan.cole@milliporesigma.com' }}});
+  Genesys("command", "Database.set", { messaging: { customAttributes: { 'context.firstName': 'Bryan', 'context.lastName':'Cole', 'email':'bryan.cole@milliporesigma.com' }}});
   });
   
 </script>
