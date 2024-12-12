@@ -25,7 +25,7 @@
 
   Genesys("subscribe", "MessagingService.conversationCleared", function() {
   console.log("Conversation cleared.");
-  Genesys("command", "Database.set", { messaging: { customAttributes: { 'context.firstName': 'Bryan', 'context.lastName':'Cole', 'email':'bryan.cole@milliporesigma.com' }}});
+  Genesys("command", "Database.set", { messaging: { customAttributes: { 'context.firstName': 'John', 'context.lastName':'Doe', 'email':'john.doe@test.com' }}});
   });
   
 </script>
