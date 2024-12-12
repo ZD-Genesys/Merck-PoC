@@ -22,6 +22,11 @@
   console.log("Database plugin is ready.");
   Genesys("command", "Database.set", { messaging: { customAttributes: { 'context.firstName': 'Bryan', 'context.lastName':'Cole', 'email':'bryan.cole@milliporesigma.com' }}});
   });
+
+  Genesys("subscribe", "MessagingService.conversationCleared", function() {
+  console.log("Conversation cleared.");
+  Genesys("command", "Database.set", { messaging: { customAttributes: { 'context.firstName': 'Bryan', 'context.lastName':'Cole', 'email':'bryan.cole@milliporesigma.com' }}});
+  });
   
 </script>
 </script>
